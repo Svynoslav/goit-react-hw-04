@@ -1,0 +1,15 @@
+.textWrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: deepskyblue;
+}
+
+.link {
+  color: deeppink;
+}
