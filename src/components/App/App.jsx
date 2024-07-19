@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import fetchImgs from "../../img-api";
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
@@ -41,18 +41,6 @@ export default function App() {
   }, [query, page]);
 
   const handleSearch = async (newQuery) => {
-    if (newQuery === "") {
-      toast("SUBMITTING EMPTY FIELDS IS UNACEEEPTAAABLEEE!!!", {
-        icon: "👺",
-        style: {
-          borderRadius: "10px",
-          background: "red",
-          color: "#fff",
-        },
-        duration: 1500,
-      });
-      return;
-    }
     setImgs([]);
     setQuery(newQuery);
     setPage(1);
